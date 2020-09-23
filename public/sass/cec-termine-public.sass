@@ -1,4 +1,159 @@
-/**
- * All of the CSS for your public-facing functionality should be
- * included in this file.
- */
+/* Variablen */
+$main-font-color: #5d5d61
+$red: #ff4724
+$orange: #ff4724
+$offwhite: #f8f8f8
+$light-grey: #f1f1f1
+
+.allover
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 100
+  display: block
+
+.datewrapper
+  width: 72px
+  height: 80px
+  position: absolute
+  top: -2px
+  left: 12px
+  z-index: 33
+  color: $main-font-color
+  text-align: left
+  border-radius: 0 0 5px 5px
+  background-color: white
+  box-shadow: 3px 3px 4px 0 rgba(0,0,0,.16)
+  .bigdate
+    color: $main-font-color
+    font-size: 32px
+    font-weight: 700
+    line-height: 30px
+    padding: 10px 10px 10px 10px
+    position: relative
+    z-index: 3
+    display: block
+    i
+      font-size: 24px
+      font-style: normal
+
+.termine-wrapper
+  margin-bottom: 30px
+  .container
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+
+.termine-wrapper .termine
+  background-color: $offwhite
+  max-width: 500px
+  position: relative
+  z-index: 1
+  flex: 0 1 31%
+  box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.2)
+  margin-bottom: 30px
+  margin-right: 3%
+  transition: all 400ms ease-in-out
+  &:nth-child(3n+1)
+    margin-right: 0
+  .thumbnail
+    overflow: hidden
+    //height: 230px
+    margin-bottom: 12px
+    position: relative
+    padding-top: 66%
+    background: no-repeat center center
+    background-size: cover
+    background-color: #333
+    margin: 0
+    img
+      margin: 0
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      object-fit: cover
+      transition: all 400ms ease-in-out
+
+  .termin-content
+    padding: 20px 20px 50px 20px
+
+  h4
+    color: $red
+    font-size: 22px
+    font-weight: normal
+
+  .cec-more
+    position: absolute
+    bottom: 20px
+    left: 20px
+    z-index: 50
+    color: $red
+
+  .cec-pfeil
+    position: absolute
+    bottom: 20px
+    right: 20px
+    z-index: 50
+    display: block
+    height: 22px
+    width: 30px
+    background: url("../img/arrow-r-red.svg") no-repeat center right transparent
+    background-size: auto 100%
+    color: $red
+    fill: $red
+
+  .button-arrow-white
+    position: absolute
+    bottom: 20px
+    left: 20px
+    z-index: 10
+
+.termine-wrapper .termine:hover
+  box-shadow: 0px 10px 10px 0 rgba(0, 0, 0, 0.3)
+  background-color: white
+  .thumbnail img
+    opacity: 0.75
+
+.termine-wrapper h2
+  flex: 1 0 100%
+  clear: both
+  margin: 1em 0 0.6em
+  font-size: 48px
+  font-family: 'Barlow', sans-serif
+
+/* single page */
+.singleTermine
+  h1
+    font-size: 2em
+    font-weight: 400
+    color: $red
+    margin: 1.5em 0 0.75em
+
+  h5
+    font-weight: 400
+    color: $red
+    font-size: 1.5em
+
+.postwrapper
+  .col-t
+    float: left
+    width: 49%
+    margin-bottom: 25px
+    margin-right: 2%
+    position: relative
+    z-index: 1
+    &.t-right
+      margin-right: 0
+      img
+        display: block
+        margin-bottom: 25px
+        width: 100%
+        height: auto
+
+    .datewrapper
+      left: auto
+      right: 20px

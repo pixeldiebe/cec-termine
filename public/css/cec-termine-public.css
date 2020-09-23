@@ -1,4 +1,167 @@
-/**
- * All of the CSS for your public-facing functionality should be
- * included in this file.
- */
+/* Variablen */
+.allover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: block;
+}
+
+.datewrapper {
+  width: 72px;
+  height: 80px;
+  position: absolute;
+  top: -2px;
+  left: 12px;
+  z-index: 33;
+  color: #5d5d61;
+  text-align: left;
+  border-radius: 0 0 5px 5px;
+  background-color: white;
+  box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.16);
+}
+.datewrapper .bigdate {
+  color: #5d5d61;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 30px;
+  padding: 10px 10px 10px 10px;
+  position: relative;
+  z-index: 3;
+  display: block;
+}
+.datewrapper .bigdate i {
+  font-size: 24px;
+  font-style: normal;
+}
+
+.termine-wrapper {
+  margin-bottom: 30px;
+}
+.termine-wrapper .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.termine-wrapper .termine {
+  background-color: #f8f8f8;
+  max-width: 500px;
+  position: relative;
+  z-index: 1;
+  flex: 0 1 31%;
+  box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  margin-right: 3%;
+  transition: all 400ms ease-in-out;
+}
+.termine-wrapper .termine:nth-child(3n+1) {
+  margin-right: 0;
+}
+.termine-wrapper .termine .thumbnail {
+  overflow: hidden;
+  margin-bottom: 12px;
+  position: relative;
+  padding-top: 66%;
+  background: no-repeat center center;
+  background-size: cover;
+  background-color: #333;
+  margin: 0;
+}
+.termine-wrapper .termine .thumbnail img {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 400ms ease-in-out;
+}
+.termine-wrapper .termine .termin-content {
+  padding: 20px 20px 50px 20px;
+}
+.termine-wrapper .termine h4 {
+  color: #ff4724;
+  font-size: 22px;
+  font-weight: normal;
+}
+.termine-wrapper .termine .cec-more {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 50;
+  color: #ff4724;
+}
+.termine-wrapper .termine .cec-pfeil {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 50;
+  display: block;
+  height: 22px;
+  width: 30px;
+  background: url("../img/arrow-r-red.svg") no-repeat center right transparent;
+  background-size: auto 100%;
+  color: #ff4724;
+  fill: #ff4724;
+}
+.termine-wrapper .termine .button-arrow-white {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+.termine-wrapper .termine:hover {
+  box-shadow: 0px 10px 10px 0 rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+.termine-wrapper .termine:hover .thumbnail img {
+  opacity: 0.75;
+}
+
+.termine-wrapper h2 {
+  flex: 1 0 100%;
+  clear: both;
+  margin: 1em 0 0.6em;
+  font-size: 48px;
+  font-family: "Barlow", sans-serif;
+}
+
+/* single page */
+.singleTermine h1 {
+  font-size: 2em;
+  font-weight: 400;
+  color: #ff4724;
+  margin: 1.5em 0 0.75em;
+}
+.singleTermine h5 {
+  font-weight: 400;
+  color: #ff4724;
+  font-size: 1.5em;
+}
+
+.postwrapper .col-t {
+  float: left;
+  width: 49%;
+  margin-bottom: 25px;
+  margin-right: 2%;
+  position: relative;
+  z-index: 1;
+}
+.postwrapper .col-t.t-right {
+  margin-right: 0;
+}
+.postwrapper .col-t.t-right img {
+  display: block;
+  margin-bottom: 25px;
+  width: 100%;
+  height: auto;
+}
+.postwrapper .col-t .datewrapper {
+  left: auto;
+  right: 20px;
+}
