@@ -41,14 +41,29 @@ get_header();
 			echo '</header>';
 		?>
 	<section class="postwrapper">
-		<div class='col-t t-left'>
-			<?php
+
+    <div class='col-t t-right'>
+      <?php
+
         if ( !empty( get_field('termin_datum') ) ) {
           $termindatum = get_field('termin_datum');
           $datum = strtotime($termindatum);
           $datum_format = date('d.m.Y', $datum);
           $monatsindex = date('n', $datum);
           $tag = date('d.', $datum);
+        }
+
+        echo "<div class='datewrapper'>";
+        echo "<span class='bigdate'>".$tag."<br><i>".$monate[$monatsindex]."</i></span>";
+        echo "</div>";
+        the_post_thumbnail("full");
+        ?>
+    </div><!-- .t-right -->
+
+		<div class='col-t t-left'>
+			<?php
+
+        if ( !empty( get_field('termin_datum') ) ) {
           printf("<h5>Datum: %s</h5>", $datum_format );
         }
 
@@ -66,14 +81,7 @@ get_header();
 				) );
         ?>
 		</div><!-- .t-right -->
-		<div class='col-t t-right'>
-			<?php
-				echo "<div class='datewrapper'>";
-				echo "<span class='bigdate'>".$tag."<br><i>".$monate[$monatsindex]."</i></span>";
-				echo "</div>";
-				the_post_thumbnail("full");
-        ?>
-		</div><!-- .t-left -->
+
 		<div class="clear"></div>
 	</section>
 </article><!-- #post-<?php the_ID(); ?> -->

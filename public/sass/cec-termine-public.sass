@@ -80,11 +80,18 @@ $light-grey: #f1f1f1
 
   .termin-content
     padding: 20px 20px 50px 20px
+    p
+      font-size: 16px
+      line-height: 24px
+      margin: 0 0 24px 0
+      color: #5d5d61
 
   h4
     color: $red
     font-size: 22px
     font-weight: normal
+    margin: 0 0 24px 0
+    font-family: 'Barlow', sans-serif
 
   .cec-more
     position: absolute
@@ -92,6 +99,8 @@ $light-grey: #f1f1f1
     left: 20px
     z-index: 50
     color: $red
+    font-size: 16px
+    line-height: 20px
 
   .cec-pfeil
     position: absolute
@@ -127,20 +136,32 @@ $light-grey: #f1f1f1
 
 /* single page */
 .singleTermine
-  h1
-    font-size: 2em
+  h1.entry-title
+    font-size: 1.75em
     font-weight: 400
     color: $red
     margin: 1.5em 0 0.75em
+    font-family: 'Barlow', sans-serif
+    text-align: left
+    margin-bottom: 1em
+    margin-top: 0
+    text-shadow: none
+    padding-bottom: 5px
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25)
 
   h5
     font-weight: 400
     color: $red
-    font-size: 1.5em
+    font-size: 1.25em
+    font-family: 'Barlow', sans-serif
+    margin-top: 0
+    margin-bottom: 1em
+    padding-top: 0
+    text-shadow: none
 
 .postwrapper
   .col-t
-    float: left
+    float: right
     width: 49%
     margin-bottom: 25px
     margin-right: 2%
@@ -157,3 +178,27 @@ $light-grey: #f1f1f1
     .datewrapper
       left: auto
       right: 20px
+
+/* tablet size */
+@media screen and (max-width: 768px)
+  /* grid */
+  .termine-wrapper .termine
+    flex: 0 1 47%
+    margin-right: 1.5%
+    margin-left: 1.5%
+    &:nth-child(3n+1)
+      margin-right: 1.5%
+
+/* phone size */
+@media screen and (max-width: 480px)
+  /* grid */
+  .termine-wrapper .termine
+    flex: 0 1 100%
+    margin-right: 0
+
+  .postwrapper
+    .col-t
+      float: none
+      width: auto
+      margin-bottom: 25px
+      margin-right: 0
